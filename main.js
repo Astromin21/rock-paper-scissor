@@ -4,45 +4,46 @@ function computerPlay() {
   let zahlen = Math.floor(Math.random() * 3);
   let computerAuswahl;
   if (zahlen === 0) {
-    computerAuswahl = "Schere";
+    computerAuswahl = "schere";
   } else if (zahlen === 1) {
-    computerAuswahl = "Stein";
+    computerAuswahl = "stein";
   } else {
-    computerAuswahl = "Papier";
+    computerAuswahl = "papier";
   }
 
   return computerAuswahl;
 }
 
 function playRound() {
-  let spielerAuswahl = prompt("Wählen Sie zwischen Schere, Stein oder Papier!");
+  let spielerEingabe = prompt("Wählen Sie zwischen Schere, Stein oder Papier!");
+  let spielerAuswahl = spielerEingabe.toLocaleLowerCase();
   let computerSelect = computerPlay();
   let ergebnis;
-  if (computerSelect === "Schere" && spielerAuswahl === "Schere") {
+  if (computerSelect === "schere" && spielerAuswahl === "schere") {
     ergebnis = 0;
     return ergebnis;
-  } else if (computerSelect === "Schere" && spielerAuswahl === "Stein") {
+  } else if (computerSelect === "schere" && spielerAuswahl === "stein") {
     ergebnis = 2;
     return ergebnis;
-  } else if (computerSelect === "Schere" && spielerAuswahl === "Papier") {
+  } else if (computerSelect === "schere" && spielerAuswahl === "papier") {
     ergebnis = 1;
     return ergebnis;
-  } else if (computerSelect === "Stein" && spielerAuswahl === "Stein") {
+  } else if (computerSelect === "stein" && spielerAuswahl === "stein") {
     ergebnis = 0;
     return ergebnis;
-  } else if (computerSelect === "Stein" && spielerAuswahl === "Schere") {
+  } else if (computerSelect === "stein" && spielerAuswahl === "schere") {
     ergebnis = 2;
     return ergebnis;
-  } else if (computerSelect === "Stein" && spielerAuswahl === "Papier") {
+  } else if (computerSelect === "stein" && spielerAuswahl === "papier") {
     ergebnis = 1;
     return ergebnis;
-  } else if (computerSelect === "Papier" && spielerAuswahl === "Papier") {
+  } else if (computerSelect === "papier" && spielerAuswahl === "papier") {
     ergebnis = 0;
     return ergebnis;
-  } else if (computerSelect === "Papier" && spielerAuswahl === "Schere") {
+  } else if (computerSelect === "papier" && spielerAuswahl === "schere") {
     ergebnis = 2;
     return ergebnis;
-  } else if (computerSelect === "Papier" && spielerAuswahl == "Stein") {
+  } else if (computerSelect === "papier" && spielerAuswahl == "stein") {
     ergebnis = 1;
     return ergebnis;
   }
