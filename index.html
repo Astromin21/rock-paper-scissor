@@ -5,11 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schere, Stein, Papier</title>
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/4206b15dbb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <script src="main.js"></script>
-    <script>
-      game();
-    </script>
+    <header class="kopf">
+      <ul class="pointsMe">
+        <li>Player</li>
+        <li id="spielerP">0</li>
+      </ul>
+      <ul class="ue">
+        <li>Rock</li>
+        <li>Paper</li>
+        <li>Scissor</li>
+      </ul>
+      <ul class="pointsCom">
+        <li>Player</li>
+        <li id="comP">0</li>
+      </ul>
+    </header>
+
+    <section class="spiel">
+      <div class="auswahl">
+        <div id="spielerA">
+
+        </div>
+        <div id="comA">
+
+        </div>
+      </div>
+      <div id="wahl">
+        <i class="symbol fa-solid fa-hand-scissors" id="schere"></i>
+        <i class="symbol fa-solid fa-hand-back-fist" id="stein"></i>
+        <i class="symbol fa-solid fa-hand" id="papier"></i>
+      </div>
+      <div id="meldung">
+        
+      </div>
+    </section>
   </body>
 </html>
